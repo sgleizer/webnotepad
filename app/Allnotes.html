@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 20px auto;
+            font-family: 'Lato';
+            background:#666;
+            color:#fff;
+        }
+        
+        *{
+            margin:0;
+            padding:0;
+        }
+        
+        h2 {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        
+        p {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        
+        ul,li{
+            list-style:none;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        ul li a{
+            text-decoration:none;
+            color:#000;
+            background:#ffc;
+            display:block;
+            height:10em;
+            width:10em;
+            padding:1em;
+        }
+        ul li{
+            margin:1em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Python HTTP Server (Records in sqlite3 database)</h2>
+    <ul>
+        <li>
+          <a href="#">
+            <h2>Title #1</h2>
+            <p>Text Content #1</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h2>Title #2</h2>
+            <p>Text Content #2</p>
+          </a>
+        </li>
+        {{user_records}}
+      </ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  # Proxies requests to internal services
+  reverse-proxy:
+    image: nginx:1.17.10
+    container_name: reverse_proxy_demo
+    build:
+      context: ./reverse_proxy
+    depends_on:
+      - app
+    volumes:
+      - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 1234:80
+
+  # generates weather reports
+  app:
+    image: app_image
+    container_name: appserver
+    build:
+      context: ./app
+    restart: on-failure
+
+
+  
